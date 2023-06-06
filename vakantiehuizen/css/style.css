@@ -1,0 +1,405 @@
+html,body{
+    background-color: white; 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f1f1f1;
+}
+/*------------navbar------------*/
+.navbar{
+  padding:0px;
+}
+.streep{
+  height: 2px;
+  width: 80%;
+  margin-left: 10%;
+  background-color: #17a2b8;
+}
+.btn{
+  border: 0px;
+}
+.nav-item{
+  border:0px;
+}
+.navbar-toggler{
+  background-color: #17a2b8;
+}
+
+.container-fluid{
+  padding:10px;
+  background-color: white; 
+  border: 0px;
+  border-bottom: 1px #17a2b8 solid;
+}
+.nav-link{
+  color: black;
+  font-family: Arial;
+  font-size: 25px;
+}
+.nav-link:hover{
+    color: grey;
+}
+
+.navbar-brand{
+  font-size: 30px;
+  font-family: Arial;
+  color: black;
+}
+.navbar-brand:hover{
+color: black;
+}
+
+/*------------Banner------------*/
+
+
+
+.main-image{
+    position: relative;
+    background: url(../image/background.jpg) no-repeat center;
+    background-size: cover;
+    height: 500px;
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container h1{
+    margin: 0;
+    font-size: 70px;
+}
+
+.container h1 span{
+    border: 6px solid white;
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+.cen{
+    margin: 20px;
+    display: block;
+    font-size: 22px;
+}
+
+.button{
+    color: #313131;
+    padding: 10px 24px;
+    background: #f1f1f1;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: .6s;
+}
+
+.button:hover{
+    opacity: .6;
+}
+/*------------carousel1------------*/
+
+.container-slid{
+  padding: 20px;
+  border: 5px solid black; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  margin-top: 20px; /* Add some margin */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the slides */
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-md-6:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 0; /* Remove the fixed height */
+  padding-bottom: 56.25%; /* Set a 16:9 aspect ratio (adjust as needed) */
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Use the entire container height */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fit the image within the slide */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 30px;
+  padding: 16px;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .slideshow-container {
+    height: 200px; /* Adjust the height as needed */
+  }
+}
+
+/*-----------cards-------*/
+
+.asso{
+  font-size: 60px;
+  font-weight: 600;
+  color:rgba(0, 0, 0, 30);
+  text-decoration: 5px underline;
+}
+
+article {
+  margin-top: 5%;
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+/* basic article elements styling */
+article h2 {
+  margin: 0 0 18px 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+article img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+  padding: 24px;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+}
+
+article a:focus {
+  outline: 1px dotted #28666e;
+}
+
+article a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+
+.articles {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 35px;
+}
+
+@media screen and (max-width: 960px) {
+  article {
+    container: card/inline-size;
+  }
+  .article-body p {
+    display: none;
+  }
+}
+
+@container card (min-width: 380px) {
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+  .article-body {
+    padding-left: 0;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  figure img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+/*------------Footer------------*/
+
+.footer-basic {
+  clear: both;
+  height: 165px;
+  position: relative;
+  border: 0px;
+  padding:20px 0;
+  background-color: #17a2b8;
+  color:black;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+    color: grey;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid black;
+    margin:0 8px;
+    color:black;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+    color: grey;
+    border:1px solid grey;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:black;
+    margin-bottom:0;
+  }
